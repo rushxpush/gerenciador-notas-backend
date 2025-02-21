@@ -4,11 +4,11 @@ import { UpdateNoteDto } from './dto/update-note.dto';
 
 @Injectable()
 export class NotesService {
-  create(createNoteDto: CreateNoteDto) {
-    return 'This action adds a new note';
+  async create(createNoteDto: CreateNoteDto): Promise<any> {
+    return `This action creates a new note`;
   }
 
-  findAll() {
+  async findAll(): Promise<any> {
     return `This action returns all notes`;
   }
 
