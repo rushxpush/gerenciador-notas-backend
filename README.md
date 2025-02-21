@@ -1,6 +1,6 @@
 # Gerenciador de Notas - Backend
 
-[Tecnologias](#tecnologias) | [Funcionalidades](#funcionalidades) | [Descrição](#descrição) | [Instalação](#instalação) | [Avisos](#avisos) | [Imagens](#imagens) | [Suporte](#suporte) | [Lista de bugs](#lista-de-bugs) | [Bugs Resolvidos](#bugs-resolvidos)
+[Tecnologias](#tecnologias) | [Funcionalidades](#funcionalidades) | [Descrição](#descrição) | [Instalação](#instalação) | [Avisos](#avisos) | [Imagens](#imagens) | [Suporte](#suporte) | [TODO](#todo) | [Lista de bugs](#lista-de-bugs) | [Bugs Resolvidos](#bugs-resolvidos)
 
 ## Tecnologias
 
@@ -14,7 +14,19 @@
 ## Funcionalidades
 
 - &check; 
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &check;  -->
 - &#x2610; 
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
 
 
 [Ir para o topo](#gerenciador-de-notas---backend)
@@ -51,15 +63,37 @@ Futuros avisos
 
 ## Imagens
 
-![Alt text](Screenshot_1.png)
-
-![Alt text](Screenshot_2.png)
-
-![Alt text](Screenshot_3.png)
-
-![Alt text](Screenshot_4.png)
+<!-- ![Alt text](Screenshot_1.png) -->
 
 ## Suporte
+
+Qualquer dúvida mande um email para [rafagarciadev@gmail.com](mailto:rafagarciadev@gmail.com)
+
+[Ir para o topo](#gerenciador-de-notas---backend)
+
+## Todo
+
+- &check; POST /notes
+- &check; GET /notes
+- &check; Testes unitários NotesController create
+- &check; Testes unitários NotesController findAll 
+- &check; Testes unitários NotesService create 
+- &check; Testes unitários NotesService findAll 
+- &#x2610; Validation Pipes
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &check;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
+<!-- - &#x2610;  -->
 
 Qualquer dúvida mande um email para [rafagarciadev@gmail.com](mailto:rafagarciadev@gmail.com)
 
