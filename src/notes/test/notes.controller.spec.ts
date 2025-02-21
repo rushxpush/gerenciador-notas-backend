@@ -2,29 +2,37 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { NotesController } from '../notes.controller';
 import { NotesService } from '../notes.service';
 import { CreateNoteDto } from '../dto/create-note.dto';
+import {
+  createDtoStub,
+  expectedCreateResponseStub,
+  expectedFindAllResponseStub,
+} from './notes.stubs';
 
 describe('NotesController', () => {
   let controller: NotesController;
-  let service: NotesService;
-
-  const dto: CreateNoteDto = {
-    title: 'Note 1 title',
-    content: 'Note 1 content',
+  const mockNotesService = {
+    create: jest.fn(),
+    findAll: jest.fn(),
   };
 
-  const expectedResponse = {
-    _id: '1',
-    ...dto,
-  };
+  const createNoteDto: CreateNoteDto = createDtoStub;
+  const expectedCreateResponse = expectedCreateResponseStub;
+  const expectedFindAllResponse = expectedFindAllResponseStub;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [NotesController],
-      providers: [NotesService],
+      providers: [
+        {
+          provide: NotesService,
+          useValue: mockNotesService,
+        },
+      ],
     }).compile();
 
     controller = module.get<NotesController>(NotesController);
-    service = module.get<NotesService>(NotesService);
+
+    jest.clearAllMocks();
   });
 
   it('should be defined', () => {
@@ -33,22 +41,23 @@ describe('NotesController', () => {
 
   describe('create', () => {
     it('should create a new note and return the created note from the database', async () => {
-      jest.spyOn(service, 'create').mockResolvedValue(expectedResponse);
+      mockNotesService.create.mockResolvedValue(expectedCreateResponse);
 
-      const response = await controller.create(dto);
+      const response = await controller.create(createNoteDto);
 
-      expect(response).toEqual(expectedResponse);
-      expect(service.create).toHaveBeenCalledWith(dto);
+      expect(response).toEqual(expectedCreateResponse);
+      expect(mockNotesService.create).toHaveBeenCalledWith(createNoteDto);
     });
   });
 
   describe('findAll', () => {
     it('should return all notes from the database', async () => {
-      jest.spyOn(service, 'findAll').mockResolvedValue(expectedResponse);
+      mockNotesService.findAll.mockResolvedValue(expectedFindAllResponse);
 
       const response = await controller.findAll();
 
-      expect(response).toEqual(expectedResponse);
+      expect(response).toEqual(expectedFindAllResponse);
+      expect(mockNotesService.findAll).toHaveBeenCalledWith();
     });
   });
 });
