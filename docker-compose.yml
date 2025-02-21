@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "3010:3000"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: mongodb://mongo:27017/gerenciador-notas
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27020:27017"
