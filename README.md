@@ -70,6 +70,7 @@ docker compose run --rm backend npm test
 
 # tests frontend (infelizmente não tive tempo de fazer uma solução mais elegante)
 # Uma nova imagem do node vai ser baixada e vai rodar os testes e depois será deletada. Demora um pouco para rodar
+# Caso trave o comando, abra uma nova aba no seu terminal. Não sei ainda o porque esse comando trava caso execute na mesma aba que executei o build e run do app
 
 ## linux
 docker run --rm -v $(pwd)/gerenciador-notas-frontend:/app -w /app node:18-alpine sh -c "npm install && npm test"
