@@ -7,51 +7,53 @@
 <ul>
   <li>Node</li>
   <li>Nest.js</li>
+  <li>MongoDB</li>
 </ul>
 
 [Ir para o topo](#gerenciador-de-notas---backend)
 
 ## Funcionalidades
 
-- &check; 
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &check;  -->
-- &#x2610; 
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-
+<ul>
+  <li>Cadastro de notas</li>
+  <li>Visualização de notas criadas</li>
+  <li>Logger de status de requisições</li>
+  <li>Validador para criação de notas</li>
+</ul>
 
 [Ir para o topo](#gerenciador-de-notas---backend)
 
 ## Descrição
 
+Backend do projeto Gerenciador de Notas. Descrição mais detalhada no repositório principal: [Gerenciador de Notas](https://github.com/rushxpush/gerenciador-notas)
 
 [Ir para o topo](#gerenciador-de-notas---backend)
 
 ## Instalação
 
-1. Faça um clone do repositório:
+1. Faça um clone do repositório central:
+
 ```bash
-git clone git@github.com:rushxpush/gerenciador-notas-backend.git
-cd gerenciador-notas-backend 
+git clone git@github.com:rushxpush/gerenciador-notas.git
 ```
 
-2. Monte a imagem e rode:
+2. Entre na pasta do repositório central
+```bash
+cd gerenciador-notas
+```
+
+3. Clone os repositórios do frontend e do backend
+```bash
+git clone git@github.com:rushxpush/gerenciador-notas-frontend.git
+git clone git@github.com:rushxpush/gerenciador-notas-backend.git
+```
+
+4. Monte a imagem e rode:
 ```bash
 docker compose up --build
 ```
 
-3. Não esqueça de montar a imagem do backend e rodar. Link: [gerenciador-notas-frontend](https://github.com/rushxpush/gerenciador-notas-frontend)
-
-4. Acesse o back em [localhost:3000](http://localhost:3000)
+5. Acesse o back em [localhost:3010](http://localhost:3010)
 
 [Ir para o topo](#gerenciador-de-notas---backend)
 
@@ -63,7 +65,9 @@ Futuros avisos
 
 ## Imagens
 
-<!-- ![Alt text](Screenshot_1.png) -->
+![Alt text](Screenshot_1.png)
+
+![Alt text](Screenshot_2.png)
 
 ## Suporte
 
@@ -79,21 +83,7 @@ Qualquer dúvida mande um email para [rafagarciadev@gmail.com](mailto:rafagarcia
 - &check; Testes unitários NotesController findAll 
 - &check; Testes unitários NotesService create 
 - &check; Testes unitários NotesService findAll 
-- &#x2610; Validation Pipes
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &check;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
-<!-- - &#x2610;  -->
+- &check; Validation Pipes
 
 Qualquer dúvida mande um email para [rafagarciadev@gmail.com](mailto:rafagarciadev@gmail.com)
 
