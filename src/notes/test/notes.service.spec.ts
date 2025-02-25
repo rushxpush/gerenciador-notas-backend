@@ -1,13 +1,14 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { NotesService } from '../notes.service';
 import { getModelToken } from '@nestjs/mongoose';
-import { Note } from '../entities/note.entity';
+
 import {
   createDtoStub,
   expectedCreateResponseStub,
   expectedFindAllResponseStub,
 } from './notes.stubs';
 import { CreateNoteDto } from '../dto/create-note.dto';
+import { Note } from '../models/notes.schema';
 
 describe('NotesService', () => {
   let service: NotesService;

@@ -5,6 +5,5 @@ export class CreateNoteDto {
   @IsString()
   title: string;
 
-  @IsString()
   content: string;
 }
