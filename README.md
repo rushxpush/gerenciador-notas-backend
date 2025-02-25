@@ -42,9 +42,13 @@ git clone git@github.com:rushxpush/gerenciador-notas.git
 cd gerenciador-notas
 ```
 
-3. Clone os repositórios do frontend e do backend
+3. Clone o repositório do frontend
 ```bash
 git clone git@github.com:rushxpush/gerenciador-notas-frontend.git
+```
+
+4. Clone o repositório do backend
+```bash
 git clone git@github.com:rushxpush/gerenciador-notas-backend.git
 ```
 
@@ -53,7 +57,26 @@ git clone git@github.com:rushxpush/gerenciador-notas-backend.git
 docker compose up --build
 ```
 
-5. Acesse o back em [localhost:3010](http://localhost:3010)
+5. Acesse a página em [localhost:8085](http://localhost:8085)
+
+6. Acesse o backend em [localhost:3010](http://localhost:3010)
+
+7. Para rodar os testes unitários (ainda não implementei o CI/CD para rodar eles automaticamente):
+```bash
+# Caso não esteja na pasta gerenciador-notas, entre nela
+
+# testes backend
+docker compose run --rm backend npm test
+
+# tests frontend (infelizmente não tive tempo de fazer uma solução mais elegante)
+# Uma nova imagem do node vai ser baixada e vai rodar os testes e depois será deletada. Demora um pouco para rodar
+
+## linux
+docker run --rm -v $(pwd)/gerenciador-notas-frontend:/app -w /app node:18-alpine sh -c "npm install && npm test"
+
+## windows (powershell)
+docker run --rm -v ${PWD}\gerenciador-notas-frontend:/app -w /app node:18-alpine sh -c "npm install && npm test"
+```
 
 [Ir para o topo](#gerenciador-de-notas---backend)
 
