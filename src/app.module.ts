@@ -6,7 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://mongo:27020/gerenciador-notas'),
+    MongooseModule.forRoot('mongodb://mongo:27017/gerenciador-notas'),
     NotesModule,
   ],
   controllers: [AppController],
