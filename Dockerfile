@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run test
+# stop build if unit tests fail
+RUN npm run test || exit 1
 RUN npm run build
 CMD ["npm", "run", "start:prod"]
